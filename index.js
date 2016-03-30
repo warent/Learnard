@@ -37,8 +37,8 @@ class Neuron {
 
 class Learnard {
 
-  constructor(layers) {
-    this.layers = math.matrix(layers);
+  constructor(params) {
+    this.layers = math.matrix(params.layers);
     this.neural_layer = [];
     this.neural_inputs = 2;
 
@@ -61,6 +61,16 @@ class Learnard {
       }
     }
   }
+
+  // Stochastic gradient descent
+  train(params) {
+    let training_data = params.training_data;
+    let epochs = params.iterations || params.cycles || params.epochs;
+    for (let i = 0; i < epochs; i++) {
+      
+    }
+  }
+
 }
 
 module.exports.Learnard = Learnard;
