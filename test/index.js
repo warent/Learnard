@@ -4,4 +4,8 @@ let Learnard = require('../').Learnard;
 let Neuron = require('../').Neuron;
 
 let bot = new Learnard([2,3,1]);
-console.log(bot.layers);
+bot.neural_layer.forEach(function(layer) {
+  layer.forEach(function (neuron) {
+    console.log(neuron.weights);
+  });
+});
